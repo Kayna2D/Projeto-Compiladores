@@ -1,0 +1,111 @@
+inicio
+    inteiro opcao.
+    inteiro numero.
+    inteiro contador.
+    inteiro soma.
+    inteiro media.
+    texto nome.
+    
+    printar("====================================").
+    printar("  PROGRAMA DE TESTE COMPLETO").
+    printar("====================================").
+    
+    printar("Digite seu nome: ").
+    ler(nome).
+    
+    printar("Olá, ").
+    printar(nome).
+    
+    printar("Escolha uma opção:").
+    printar("1 - Tabuada").
+    printar("2 - Sequência de Fibonacci").
+    printar("3 - Fatorial").
+    printar("4 - Soma de números").
+    
+    printar("Digite a opção: ").
+    ler(opcao).
+    
+    se (opcao == 1) {
+        printar(">>> TABUADA <<<").
+        printar("Digite um número: ").
+        ler(numero).
+        
+        para (inteiro i = 1; i <= 10; i = i + 1) {
+            inteiro res.
+            res = numero * i.
+            printar(res).
+        }
+    } senseaose (opcao == 2) {
+        printar(">>> FIBONACCI <<<").
+        printar("Quantos termos? ").
+        ler(numero).
+        
+        inteiro termo1.
+        inteiro termo2.
+        inteiro proximo.
+        
+        termo1 = 0.
+        termo2 = 1.
+        contador = 1.
+        
+        enquanto (contador <= numero) {
+            se (contador == 1) {
+                printar(termo1).
+            } senaose (contador == 2) {
+                printar(termo2).
+            } senao {
+                proximo = termo1 + termo2.
+                printar(proximo).
+                termo1 = termo2.
+                termo2 = proximo.
+            }
+            contador = contador + 1.
+        }
+    } senaose (opcao == 3) {
+        printar(">>> FATORIAL <<<").
+        printar("Digite um número: ").
+        ler(numero).
+        
+        inteiro fatorial.
+        fatorial = 1.
+        contador = 1.
+        
+        enquanto (contador <= numero) {
+            fatorial = fatorial * contador.
+            contador = contador + 1.
+        }
+        
+        printar("Fatorial de ").
+        printar(numero).
+        printar(" = ").
+        printar(fatorial).
+    } senaose (opcao == 4) {
+        printar(">>> SOMA DE NÚMEROS <<<").
+        printar("Quantos números deseja somar? ").
+        ler(numero).
+        
+        soma = 0.
+        contador = 1.
+        
+        enquanto (contador <= numero) {
+            soma = soma + contador.
+            contador = contador + 1.
+        }
+        
+        media = soma / numero.
+        
+        printar("Soma de 1 a ").
+        printar(numero).
+        printar(" = ").
+        printar(soma).
+        
+        printar("Média = ").
+        printar(media).
+    } senao {
+        printar("Opção inválida!").
+    }
+    
+    printar("====================================").
+    printar("  FIM DO PROGRAMA").
+    printar("====================================").
+fim

@@ -1,0 +1,25 @@
+inicio
+    inteiro a.
+    inteiro b.
+    decimal c.
+    
+    a = 10.
+    b = 20.
+    
+    printar(a).
+    printar(d).         // ERRO 1: 'd' não declarada
+    
+    c = a + b.          // OK: decimal = inteiro + inteiro
+    a = c + 3.14.       // ERRO 2: atribuindo decimal a inteiro
+    
+    inteiro a.          // ERRO 3: 'a' redeclarada
+    
+    se (a > "teste") {  // ERRO 4: comparando inteiro com texto
+        printar("Erro").
+    }
+    
+    enquanto (b < "abc") {  // ERRO 5: comparando inteiro com texto
+        printar(b).
+        b = b + 1.
+    }
+fim

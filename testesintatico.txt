@@ -1,0 +1,17 @@
+inicio
+    inteiro x.
+    decimal y.
+    
+    printar("Teste de erros:").
+    
+    x = 10 + .
+    y = 5 * (3 + 2.
+    
+    se (x > 5 {
+        printar("X maior que 5").
+    }
+    
+    enquanto (y < 10 {
+        y = y + 1.
+    }
+fim
