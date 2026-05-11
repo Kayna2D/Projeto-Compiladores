@@ -362,13 +362,6 @@ public class Lexer {
                 System.out.println(t);
             }
         }
-        
-        if (!erros.isEmpty()) {
-            System.out.println("\n=== ERROS LÉXICOS ===");
-            for (String erro : erros) {
-                System.out.println(erro);
-            }
-        }
     }
     
     public List<Token> getTokens() {
