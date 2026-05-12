@@ -294,7 +294,7 @@ public class GeradorCodigoC {
                     codigoC.append(" ").append(rotulo).append(" ");
 
                     if (rotulo.equals("/") && isArithmeticOperatorNode(right) && precedence(right) <= precedence(no)) {
-                        // Special-case: ensure denominators with additive expressions are parenthesized
+                        // Caso especial: garantir que denominadores com expressões aditivas sejam parêntesadas
                         StringBuilder tmp = new StringBuilder();
                         gerarExpressaoEmString(right, tmp);
                         codigoC.append("(").append(tmp.toString()).append(")");
@@ -343,7 +343,7 @@ public class GeradorCodigoC {
         if (no == null) return 0;
         String r = no.getRotulo();
 
-        // unwrap fator which may contain an expression
+        // desenrolar fator que pode conter uma expressão
         if (r.equals("fator") && !no.getFilhos().isEmpty()) {
             return precedence(no.getFilhos().get(0));
         }
