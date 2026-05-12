@@ -58,7 +58,7 @@ public class Parser {
             return token;
         } else {
             addErro(msgErro);
-            // Skip tokens until we find the expected token or a statement boundary
+            // Pula tokens até encontrar o token esperado ou um limite de declaração
             while (indice < tokens.size() &&
                    tokenAtual != null &&
                    tokenAtual.getTipo() != tipoEsperado &&
@@ -67,12 +67,12 @@ public class Parser {
                 next();
             }
 
-            // If we stopped at the expected token, consume it to recover
+            // Se parar no token esperado, consome para recuperar
             if (tokenAtual != null && tokenAtual.getTipo() == tipoEsperado) {
                 next();
             } else if (tokenAtual != null && tokenAtual.getTipo() == TipoToken.PONTO_FINAL
                        && tipoEsperado == TipoToken.PONTO_FINAL) {
-                // only consume the statement terminator if the caller expected it
+                // Só consome o limite de declaração se o chamador esperava
                 next();
             }
 
